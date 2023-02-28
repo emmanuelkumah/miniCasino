@@ -1,0 +1,12 @@
+.home__bg {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+      rgba(49, 6, 41, 0.8) 100%,
+      rgba(49, 6, 41, 0.8) 100%
+    ),
+    url(../../../public//assets/images/bg.png) center center no-repeat;
+}
+.home__container {
+  padding: 2rem 4.5rem;
+}

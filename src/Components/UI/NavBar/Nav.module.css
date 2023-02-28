@@ -1,0 +1,30 @@
+.nav__section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav__brand > h1 > span {
+  color: var(--main-color);
+}
+.nav__menu {
+  list-style-type: none;
+  display: flex;
+}
+.nav__menu > li {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  margin: 0 1rem;
+}
+.nav__menu > li:hover,
+.nav__menu > li:active,
+.nav__login > li:hover,
+.nav__login > li:active {
+  color: var(--main-color);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.nav__login {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+}
