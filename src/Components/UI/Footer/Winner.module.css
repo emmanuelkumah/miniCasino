@@ -1,0 +1,37 @@
+.winner_container {
+  padding-top: 4rem;
+  display: grid;
+  place-items: center;
+}
+.winner_container > h3 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+.winner_lists__container {
+  margin-top: 1rem;
+  display: grid;
+  place-items: center;
+}
+.winner_lists {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 50%;
+}
+.winner_lists__item {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--main-color);
+  margin: 1rem;
+  color: #390a2d;
+}
+.winner_details {
+  margin: 1rem;
+}
+.winner_details--small {
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+.winner_icon {
+  margin-right: 0.7rem;
+}

@@ -1,0 +1,43 @@
+.main_container {
+  padding: 4rem 4.5rem;
+  height: auto;
+  width: 100%;
+  background: linear-gradient(
+      rgba(49, 6, 41, 0.8) 100%,
+      rgba(49, 6, 41, 0.8) 100%
+    ),
+    url(../../../../public/assets/images/bg.png) center center no-repeat;
+}
+.main_heading {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.card-layout {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-layout__item {
+  flex-basis: 30%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border: 5px solid var(--main-color);
+  border-radius: 10px;
+}
+
+.game-icon {
+  width: 30%;
+  display: block;
+  margin: 1rem auto;
+}
+.game-details__container > h3 {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 200;
+  color: var(--main-color);
+  margin-bottom: 1rem;
+}
+.game-details__container {
+  padding: 1.5rem;
+}
