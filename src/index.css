@@ -8,6 +8,8 @@
 :root {
   --main-color: #ffba49;
   --alt-color: #fbfffe;
+  --alt-color-purple: #3e0928;
+  --alt-color-blue: #101935;
 }
 body {
   font-family: "Poppins", sans-serif;

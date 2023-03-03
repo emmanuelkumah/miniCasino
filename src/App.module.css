@@ -1,2 +1,14 @@
-.app__container {
+.app_bg {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+      rgba(49, 6, 41, 0.8) 100%,
+      rgba(49, 6, 41, 0.8) 100%
+    ),
+    url(../public/assets/images/bg2.jpg) center center no-repeat;
+}
+.app_container {
+  padding-top: 2rem;
+  /* padding-left: 4.5rem;
+  padding-right: 4.5rem; */
 }

@@ -41,3 +41,10 @@
 .game-details__container {
   padding: 1.5rem;
 }
+a,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+  color: var(--main-color);
+}

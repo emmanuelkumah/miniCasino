@@ -1,0 +1,42 @@
+.login_container {
+  display: grid;
+  place-items: center;
+  margin-top: 1rem;
+}
+.login_container > h3 {
+  padding-bottom: 2rem;
+}
+.form__container_login {
+  width: 50%;
+  height: auto;
+  border: 5px solid var(--main-color);
+  border-radius: 10px;
+  padding: 2rem 4rem;
+}
+.form__container {
+  width: 50%;
+  height: 75vh;
+  border: 5px solid var(--main-color);
+  border-radius: 10px;
+  padding: 1rem 4rem;
+}
+.form_input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.form_btn {
+  margin-top: 0.5rem;
+  outline: none;
+  border: none;
+  width: 20%;
+  background: var(--main-color);
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}

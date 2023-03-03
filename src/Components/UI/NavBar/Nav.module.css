@@ -1,10 +1,24 @@
-.nav__section {
+.nav__container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 1.5rem 4.5rem;
+}
+.nav__container--sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--main-color);
+  width: 100%;
 }
 .nav__brand > h1 > span {
   color: var(--main-color);
+}
+.nav__brand--sticky > h1 > span {
+  color: #3e0928;
+}
+.nav__menu--icon {
+  display: none;
 }
 .nav__menu {
   list-style-type: none;
@@ -12,19 +26,71 @@
 }
 .nav__menu > li {
   font-family: "Roboto", sans-serif;
-  font-weight: 700;
+  font-weight: 300;
+  font-size: 1.3rem;
   margin: 0 1rem;
 }
 .nav__menu > li:hover,
 .nav__menu > li:active,
-.nav__login > li:hover,
 .nav__login > li:active {
   color: var(--main-color);
   transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
+.nav__menu--sticky,
+.nav__login--sticky {
+  color: var(--alt-color-purple);
+}
+.nav__menu--sticky > li:hover,
+.nav__menu--sticky > li:active,
+.nav__menu--sticky:focus {
+  color: var(--alt-color-blue);
+  transition: all 0.5s ease-in-out;
+  font-weight: 500;
+}
 .nav__login {
   list-style-type: none;
   display: flex;
   gap: 2rem;
+}
+.login:hover,
+.login:active,
+.signup:hover,
+.signup:active {
+  color: var(--main-color);
+  cursor: pointer;
+}
+.login__sticky:hover,
+.login__sticky:active,
+.signup__sticky:hover,
+.sign__sticky:active {
+  color: var(--alt-color-blue);
+  font-weight: bold;
+  cursor: pointer;
+}
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+  .nav__container {
+    flex-direction: row;
+    padding: 1.5rem 2rem;
+  }
+  .nav__menu--icon {
+    display: block;
+  }
+  .nav__menu {
+    display: none;
+  }
+  .nav__menu--mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    left: 30px;
+  }
+  .nav__menu--mobile {
+    list-style-type: none;
+  }
+  .nav__login {
+    display: none;
+  }
 }
