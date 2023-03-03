@@ -36,7 +36,46 @@
   border: none;
   width: 20%;
   background: var(--main-color);
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
   font-size: 1.2rem;
+}
+.form_btn:hover,
+.form_btn:active {
+  background-color: var(--alt-color-purple);
+  color: aliceblue;
+  transition: all 0.5s ease-in-out;
+}
+.input_err {
+  color: red;
+}
+.success_msg {
+  color: var(--main-color);
+}
+
+/* Responsiveness */
+@media only screen and (max-width: 600px) {
+  .login_container {
+    padding: 1rem 2rem;
+  }
+  .form__container {
+    width: 100%;
+    padding: 1rem;
+  }
+  .form_btn {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-device-width: 601px) and (max-device-width: 1024px) {
+  .login_container {
+    padding: 1rem 2rem;
+  }
+  .form__container {
+    width: 100%;
+    padding: 1rem;
+  }
+  .form_btn {
+    width: 100%;
+  }
 }
