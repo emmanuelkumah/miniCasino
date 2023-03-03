@@ -48,3 +48,29 @@ a:focus {
   text-decoration: none;
   color: var(--main-color);
 }
+@media only screen and (max-width: 600px) {
+  .card-layout {
+    display: flex;
+    flex-direction: column;
+  }
+  .card-layout__item {
+    flex-basis: 100%;
+    margin: 1rem;
+  }
+  .main_container {
+    padding: 4rem 2rem;
+  }
+}
+@media only screen and (min-device-width: 601px) and (max-device-width: 1024px) {
+  .card-layout {
+    display: flex;
+    flex-direction: column;
+  }
+  .card-layout__item {
+    flex-basis: 100%;
+    margin: 1rem;
+  }
+  .main_container {
+    padding: 4rem 2rem;
+  }
+}

@@ -16,7 +16,7 @@ const Nav = () => {
   //display stickyNav
   const stickyNav = () => {
     let windowHeight = window.scrollY;
-    windowHeight > 120 ? setIsSticky(true) : setIsSticky(false);
+    windowHeight > 200 ? setIsSticky(true) : setIsSticky(false);
   };
 
   //show hamburger menu
@@ -31,10 +31,7 @@ const Nav = () => {
           className={`${styles["nav__container"]} ${
             isSticky && styles["nav__container--sticky"]
           }`}>
-          <div
-            className={`${styles["nav__brand"]} ${
-              isSticky && styles["nav__brand--sticky"]
-            }`}>
+          <div className={styles["nav__brand"]}>
             <h1>
               Casi<span>.Play</span>
             </h1>
@@ -43,7 +40,25 @@ const Nav = () => {
             {isMenuClicked ? <FaTimes /> : <FaBars />}
           </div>
           {/* Menu items  */}
-          <ul
+          <div
+            className={`${styles["nav_items--container"]} ${
+              isMenuClicked && styles["nav_items-container-res"]
+            }`}>
+            <div className={styles["nav_menu--container"]}>
+              <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Game</li>
+              </ul>
+            </div>
+            <div className={styles["nav_signup--container"]}>
+              <ul>
+                <li className={styles["nav_login--btn"]}>Login</li>
+                <li className={styles["nav_signup--btn"]}>Sign up</li>
+              </ul>
+            </div>
+          </div>
+          {/* <ul
             className={`${
               !isMenuClicked ? styles["nav__menu"] : styles["nav__menu--mobile"]
             } ${isSticky && styles["nav__menu--sticky"]}`}>
@@ -52,9 +67,11 @@ const Nav = () => {
             <li>Games</li>
           </ul>
           <ul
-            className={`${styles["nav__login"]} ${
-              isSticky && styles["nav__login--sticky"]
-            }`}>
+            className={`${
+              !isMenuClicked
+                ? styles["nav__login--container"]
+                : styles["nav__login--container-mobile"]
+            } ${isSticky && styles["nav__login--sticky"]}`}>
             <li
               className={`${styles.login} ${
                 isSticky && styles["login__sticky"]
@@ -67,7 +84,7 @@ const Nav = () => {
               }`}>
               Sign Up
             </li>
-          </ul>
+          </ul> */}
         </nav>
       </header>
     </>

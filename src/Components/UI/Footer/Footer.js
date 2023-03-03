@@ -6,8 +6,14 @@ const Footer = () => {
   return (
     <div>
       <footer className={styles["footer_bg"]}>
-        <Winners />
-        <Copyright />
+        <div className={styles["footer_container"]}>
+          <div>
+            <Winners />
+          </div>
+          <div>
+            <Copyright />
+          </div>
+        </div>
       </footer>
     </div>
   );

@@ -35,3 +35,34 @@
 .winner_icon {
   margin-right: 0.7rem;
 }
+@media only screen and (max-width: 600px) {
+  .winner_container {
+    padding: 2rem 3rem;
+  }
+
+  .winner_lists {
+    width: 90vw;
+  }
+  .winner_lists__item {
+    flex-direction: column;
+  }
+  .winner_details {
+    margin: 0.5rem 1rem;
+  }
+}
+
+@media only screen and (min-device-width: 601px) and (max-device-width: 1024px) {
+  .winner_container {
+    padding: 2rem 3rem;
+  }
+
+  .winner_lists {
+    width: 90vw;
+  }
+  .winner_lists__item {
+    flex-direction: column;
+  }
+  .winner_details {
+    margin: 0.5rem 1rem;
+  }
+}

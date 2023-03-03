@@ -4,8 +4,8 @@ import heroImg from "./hero2.png";
 const Hero = () => {
   return (
     <>
-      <div className={styles["split_screen"]}>
-        <div className={styles["split_screen__half"]}>
+      <div className={styles["hero_row"]}>
+        <div className={styles["hero_col"]}>
           <section className={styles["hero_content"]}>
             <p>Join the elite club</p>
             <div className={styles["sub_title"]}>
@@ -24,10 +24,9 @@ const Hero = () => {
             </div>
           </section>
         </div>
-        <div className={styles["split_screen__half"]}>
-          <div className={styles["hero_img"]}>
-            <img src={heroImg} alt={heroImg} />
-          </div>
+        <div className={styles["hero_col"]}>
+          {/* <h1>Content 2</h1> */}
+          <img src={heroImg} alt={heroImg} className={styles["hero_img"]} />
         </div>
       </div>
     </>
