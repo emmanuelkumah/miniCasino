@@ -5,7 +5,8 @@
       rgba(49, 6, 41, 0.9) 100%,
       rgba(49, 6, 41, 0.9) 100%
     ),
-    url(../.././../../public/assets/images/footer.jpg) center center no-repeat;
+    url(../.././../../public/assets/images/background.jpg) center center
+      no-repeat;
 }
 .copyright-container {
   display: grid;

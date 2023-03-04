@@ -17,7 +17,7 @@ const Nav = () => {
   //display stickyNav
   const stickyNav = () => {
     let windowHeight = window.scrollY;
-    windowHeight > 200 ? setIsSticky(true) : setIsSticky(false);
+    windowHeight > 100 ? setIsSticky(true) : setIsSticky(false);
   };
 
   //show hamburger menu

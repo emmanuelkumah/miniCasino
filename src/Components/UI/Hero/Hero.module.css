@@ -1,5 +1,16 @@
+.hero_container {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+      rgba(49, 6, 41, 0.8) 100%,
+      rgba(49, 6, 41, 0.8) 100%
+    ),
+    url(../../../../public/assets/images/bg2.jpg) center center no-repeat;
+}
 .hero_row {
   display: flex;
+  padding-left: 4.5rem;
+  padding-right: 4.5rem;
 }
 .hero_col {
   width: 50%;
@@ -65,7 +76,10 @@
 @media only screen and (max-width: 600px) {
   .hero_row {
     flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
+
   .hero_col {
     width: 100%;
   }
@@ -76,7 +90,8 @@
     font-size: 2rem;
   }
   .hero_img {
-    display: none;
+    width: 300px;
+    height: 300px;
   }
   .hero_content > p {
     padding-top: 1rem;
@@ -96,7 +111,8 @@
     font-size: 2rem;
   }
   .hero_img {
-    display: none;
+    width: 300px;
+    height: 300px;
   }
   .hero_content > p {
     padding-top: 1rem;
