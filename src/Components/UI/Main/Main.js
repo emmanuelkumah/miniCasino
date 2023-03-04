@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Main.module.css";
 import jackpot from "../../../images/jackpot.png";
 import dices from "../../../images/dices.png";
@@ -26,7 +27,11 @@ const Main = () => {
                   More than 100 slot games to choose from including Starbuts,
                   Rainbow Riches and many more
                 </p>
-                <a href="#">Play Game</a>
+                <div className={styles["play_btn"]}>
+                  <Link to="/games" className={styles["play_link"]}>
+                    Play Game
+                  </Link>
+                </div>
               </article>
             </div>
             <div className={styles["card-layout__item"]}>
@@ -37,7 +42,11 @@ const Main = () => {
                   Bet on the outcome of the roll of a pair of dices, enjoy
                   popular games such as Craps, Hazards,Klondike etc{" "}
                 </p>
-                <a href="#">Play Game</a>
+                <div className={styles["play_btn"]}>
+                  <Link to="/games" className={styles["play_link"]}>
+                    Play Game
+                  </Link>
+                </div>
               </article>
             </div>
             <div className={styles["card-layout__item"]}>
@@ -45,10 +54,14 @@ const Main = () => {
               <article className={styles["game-details__container"]}>
                 <h3>Table Games</h3>
                 <p>
-                  Have a seat at one of our table games and try your hand at
-                  popular casino card games such as BlackJack, Ultimate Texas...
+                  Try your hand at popular casino card games such as BlackJack,
+                  Ultimate Texas...
                 </p>
-                <a href="#">Play Game</a>
+                <div className={styles["play_btn"]}>
+                  <Link to="/games" className={styles["play_link"]}>
+                    Play Game
+                  </Link>
+                </div>
               </article>
             </div>
           </div>

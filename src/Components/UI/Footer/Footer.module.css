@@ -8,7 +8,6 @@
     url(../.././../../public/assets/images/footer.jpg) center center no-repeat;
 }
 .copyright-container {
-  margin-top: 3rem;
   display: grid;
   place-items: center;
   background: rgba(49, 6, 41, 0.9);

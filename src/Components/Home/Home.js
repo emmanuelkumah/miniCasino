@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../UI/Footer/Footer";
+import Winner from "../UI/Footer/Winner";
 import Hero from "../UI/Hero/Hero";
 import Main from "../UI/Main/Main";
 import styles from "./Home.module.css";
@@ -12,7 +12,7 @@ const Home = () => {
           <Hero />
         </div>
         <Main />
-        <Footer />
+        <Winner />
       </div>
     </>
   );

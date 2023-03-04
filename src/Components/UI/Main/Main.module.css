@@ -41,12 +41,24 @@
 .game-details__container {
   padding: 1.5rem;
 }
-a,
-a:hover,
-a:active,
-a:focus {
+.play_link {
   text-decoration: none;
-  color: var(--main-color);
+  color: var(--alt-color-purple);
+}
+.play_link:hover,
+.play_link:active {
+  color: var(--alt-color);
+}
+.play_btn {
+  width: fit-content;
+  margin-top: 1rem;
+  background-color: var(--main-color);
+  border: 10px;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+}
+.play_btn > Link:hover {
+  color: var(--alt-color-purple);
 }
 @media only screen and (max-width: 600px) {
   .card-layout {

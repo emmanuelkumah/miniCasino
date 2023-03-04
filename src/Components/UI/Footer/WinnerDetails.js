@@ -38,7 +38,7 @@ const displayWinners = winners.map((winner) => {
     </li>
   );
 });
-const Winners = () => {
+const WinnerDetails = () => {
   return (
     <>
       <section className={styles["winner_container"]}>
@@ -52,4 +52,4 @@ const Winners = () => {
   );
 };
 
-export default Winners;
+export default WinnerDetails;

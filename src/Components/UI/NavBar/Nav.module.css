@@ -3,6 +3,7 @@
   flex-direction: row;
   padding: 1.5rem 4.5rem;
   justify-content: space-between;
+  background-color: var(--main-color);
 }
 .nav_items--container {
   display: flex;
@@ -21,30 +22,40 @@
 }
 .nav_menu--container > ul > li:hover,
 .nav_menu--container > ul > li:active {
-  color: var(--main-color);
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border: 3px solid var(--alt-color);
+  border-radius: 20px;
 }
 .nav_login--btn,
 .nav_signup--btn {
-  border: 3px solid var(--main-color);
+  border: 3px solid var(--alt-color-purple);
   border-radius: 20px;
   padding: 0.2rem 1rem;
 }
 .nav_signup--btn {
-  background-color: var(--main-color);
-  color: var(--alt-color-purple);
+  background-color: var(--alt-color-purple);
+  color: #fff;
 }
 .nav_signup--btn:hover,
 .nav_signup--btn:active {
-  background-color: var(--alt-color-purple);
-  color: var(--main-color);
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
+  background-color: transparent;
+  border: 3px solid var(--alt-color);
+}
+
+.nav_login--btn > a,
+.nav_signup--btn > a {
+  text-decoration: none;
+  color: var(--alt-color);
+}
+
+.nav_login--btn > a:hover,
+.nav_login--btn > a:active {
+  color: var(--alt-color-purple);
 }
 .nav_login--btn:hover,
 .nav_login--btn:active {
-  background-color: var(--main-color);
+  background-color: var(--alt-color);
   color: var(--alt-color-purple);
   cursor: pointer;
   transition: all 0.5s ease-in-out;
@@ -57,10 +68,19 @@
   background-color: var(--alt-color-purple);
   width: 100%;
 }
-.nav__brand > h1 > span {
-  color: var(--main-color);
+.nav__brand {
+  display: flex;
 }
-
+.nav__brand > h1 {
+  color: var(--alt-color);
+}
+.nav_brank_lnk {
+  text-decoration: none;
+}
+.nav_brand_icon {
+  font-size: 2rem;
+  color: var(--alt-color);
+}
 .nav__menu--icon {
   display: none;
 }

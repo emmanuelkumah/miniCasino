@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { FaTimes, FaBars } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { FaTimes, FaBars, FaChessKnight } from "react-icons/fa";
 
 import styles from "./Nav.module.css";
 
@@ -31,11 +32,12 @@ const Nav = () => {
           className={`${styles["nav__container"]} ${
             isSticky && styles["nav__container--sticky"]
           }`}>
-          <div className={styles["nav__brand"]}>
-            <h1>
-              Casi<span>.Play</span>
-            </h1>
-          </div>
+          <Link to="/" className={styles["nav_brank_lnk"]}>
+            <div className={styles["nav__brand"]}>
+              <h1>Casi_Play</h1>
+              <FaChessKnight className={styles["nav_brand_icon"]} />
+            </div>
+          </Link>
           <div className={styles["nav__menu--icon"]} onClick={handleMenuIcon}>
             {isMenuClicked ? <FaTimes /> : <FaBars />}
           </div>
@@ -53,38 +55,15 @@ const Nav = () => {
             </div>
             <div className={styles["nav_signup--container"]}>
               <ul>
-                <li className={styles["nav_login--btn"]}>Login</li>
-                <li className={styles["nav_signup--btn"]}>Sign up</li>
+                <li className={styles["nav_login--btn"]}>
+                  <Link to="/login">Login</Link>
+                </li>
+                <li className={styles["nav_signup--btn"]}>
+                  <Link to="/signup">Sign up</Link>
+                </li>
               </ul>
             </div>
           </div>
-          {/* <ul
-            className={`${
-              !isMenuClicked ? styles["nav__menu"] : styles["nav__menu--mobile"]
-            } ${isSticky && styles["nav__menu--sticky"]}`}>
-            <li>Home</li>
-            <li>About</li>
-            <li>Games</li>
-          </ul>
-          <ul
-            className={`${
-              !isMenuClicked
-                ? styles["nav__login--container"]
-                : styles["nav__login--container-mobile"]
-            } ${isSticky && styles["nav__login--sticky"]}`}>
-            <li
-              className={`${styles.login} ${
-                isSticky && styles["login__sticky"]
-              }`}>
-              Login
-            </li>
-            <li
-              className={`${styles.signup} ${
-                isSticky && styles["signup__sticky"]
-              }`}>
-              Sign Up
-            </li>
-          </ul> */}
         </nav>
       </header>
     </>

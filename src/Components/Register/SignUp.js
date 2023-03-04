@@ -1,11 +1,14 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import styles from "./Register.module.css";
 
-const SignUp = () => {
+const SignUp = ({ getFormData }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const navigate = useNavigate();
 
   //form validation rules
   const validationSchema = Yup.object().shape({
@@ -34,10 +37,12 @@ const SignUp = () => {
 
   //handle form submission
   const onFormSubmit = (data) => {
-    console.log(data);
+    getFormData(data);
     setIsSubmitted(true);
     reset();
-    // setIsSubmitted(false);
+
+    //redirect to games
+    navigate("/games");
   };
   //handle errors
   const onFormError = (errors) => {
