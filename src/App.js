@@ -7,9 +7,13 @@ import Login from "./Components/Register/Login";
 import SignUp from "./Components/Register/SignUp";
 import Games from "./Components/Games/Games";
 import Layout from "./Components/UI/Layout/Layout";
+import GameDetail from "./Components/Games/GameDetail";
+import { gamesLibrary } from "./Utils/GamesData";
 
 function App() {
   const [userDetails, setUserDetails] = useState({});
+  const [searchGame, setSearchGame] = useState("Casino");
+  const [games, setGames] = useState(gamesLibrary);
 
   useEffect(() => {
     localStorage.setItem("user", JSON.stringify(userDetails));
@@ -20,9 +24,22 @@ function App() {
     setUserDetails(data);
   };
 
-  const value = userDetails;
+  //search for a game by name
+  const filterBySearch = (event) => {
+    const searchTerm = event.target.value;
+
+    const updatedGames = [...games];
+    const filteredGames = updatedGames.filter((game) => {
+      const { name } = game;
+      return name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
+    });
+    //update games
+    setGames(filteredGames);
+  };
+
   return (
-    <UserContext.Provider value={value}>
+    <UserContext.Provider
+      value={{ userDetails, searchGame, setSearchGame, games, filterBySearch }}>
       <Layout>
         <div className={styles["app_bg"]}>
           <div className={styles["app_container"]}>
@@ -34,6 +51,7 @@ function App() {
                 element={<SignUp getFormData={getFormData} />}
               />
               <Route path="/games" element={<Games />} />
+              <Route path="/games/:id" element={<GameDetail />} />
             </Routes>
           </div>
         </div>

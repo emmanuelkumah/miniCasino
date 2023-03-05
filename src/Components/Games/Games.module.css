@@ -15,6 +15,15 @@
   width: 100%;
   height: 200px;
 }
+.card_name {
+  text-align: center;
+  padding: 1rem 0rem;
+  font-weight: 300;
+}
+.card_link {
+  text-decoration: none;
+  color: var(--alt-color);
+}
 .games_search {
   margin-top: 2rem;
   display: grid;
@@ -47,4 +56,46 @@
   border: 2px solid var(--main-color);
   color: var(--alt-color);
   cursor: pointer;
+}
+/* Game details  */
+.game_details--container {
+  padding: 2rem 4.5rem;
+}
+.game_details--container > section {
+  padding-top: 3rem;
+}
+.game_title {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.game_desc {
+  line-height: 1.5;
+  text-align: center;
+  padding: 1rem 6rem 2rem;
+}
+.game_img--container {
+  display: grid;
+  place-content: center;
+}
+.game_img--container > img {
+  height: 100%;
+}
+.game_cta {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.game_btn {
+  display: flex;
+  gap: 4rem;
+}
+.game_btn > button:nth-child(1),
+.game_btn > button:nth-child(2),
+.game_btn > button:nth-child(3),
+.game_btn > button:nth-child(4) {
+  background-color: var(--main-color);
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  border-radius: 50%;
+  border: none;
 }
