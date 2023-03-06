@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { FaTimes, FaBars, FaChessKnight } from "react-icons/fa";
 
 import styles from "./Nav.module.css";
+import { UserContext } from "../../../context";
 
 const Nav = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [isMenuClicked, setIsMenuClicked] = useState(false);
+
+  const { userDetails } = useContext(UserContext);
 
   useEffect(() => {
     window.onscroll = () => {
@@ -23,6 +26,13 @@ const Nav = () => {
   //show hamburger menu
   const handleMenuIcon = () => {
     setIsMenuClicked(!isMenuClicked);
+  };
+
+  //handleLogout
+  const handleLogout = () => {
+    localStorage.removeItem("userDetails");
+    //redirect to home
+    // navigate("/");
   };
 
   return (
@@ -50,19 +60,25 @@ const Nav = () => {
               <ul>
                 <li>Home</li>
                 <li>About</li>
-                <li>Game</li>
               </ul>
             </div>
-            <div className={styles["nav_signup--container"]}>
-              <ul>
-                <li className={styles["nav_login--btn"]}>
-                  <Link to="/login">Login</Link>
-                </li>
-                <li className={styles["nav_signup--btn"]}>
-                  <Link to="/signup">Sign up</Link>
-                </li>
-              </ul>
-            </div>
+            {userDetails.username ? (
+              <div className={styles["username_container"]}>
+                <h3>{`Hi ${userDetails.username}`}</h3>
+                <button onClick={handleLogout}>Log out </button>
+              </div>
+            ) : (
+              <div className={styles["nav_signup--container"]}>
+                <ul>
+                  <li className={styles["nav_login--btn"]}>
+                    <Link to="/login">Login</Link>
+                  </li>
+                  <li className={styles["nav_signup--btn"]}>
+                    <Link to="/signup">Sign up</Link>
+                  </li>
+                </ul>
+              </div>
+            )}
           </div>
         </nav>
       </header>

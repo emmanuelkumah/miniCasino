@@ -84,7 +84,21 @@
 .nav__menu--icon {
   display: none;
 }
-
+.username_container {
+  display: flex;
+  gap: 2rem;
+}
+.username_container > button {
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+}
+.username_container > button:hover,
+.username_container > button:active {
+  cursor: pointer;
+  background-color: var(--alt-color);
+}
 /* Media Queries */
 @media only screen and (max-width: 600px) {
   .nav__container {

@@ -11,13 +11,25 @@ import GameDetail from "./Components/Games/GameDetail";
 import { gamesLibrary } from "./Utils/GamesData";
 
 function App() {
-  const [userDetails, setUserDetails] = useState({});
-  const [searchGame, setSearchGame] = useState("Casino");
+  const [userDetails, setUserDetails] = useState(() => {
+    const savedItem = localStorage.getItem("userDetails");
+    const parsed = JSON.parse(savedItem);
+    return parsed || "";
+  });
   const [games, setGames] = useState(gamesLibrary);
+  const [isSignUp, setIsSignUp] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem("user", JSON.stringify(userDetails));
+    localStorage.setItem("userDetails", JSON.stringify(userDetails));
   }, [userDetails]);
+
+  //persit data on reload
+  useEffect(() => {
+    const savedItem = localStorage.getItem("userDetails");
+    if (savedItem !== "") {
+      setUserDetails(JSON.parse(savedItem));
+    }
+  }, []);
 
   //getForm Data
   const getFormData = (data) => {
@@ -39,7 +51,13 @@ function App() {
 
   return (
     <UserContext.Provider
-      value={{ userDetails, searchGame, setSearchGame, games, filterBySearch }}>
+      value={{
+        userDetails,
+        games,
+        filterBySearch,
+        setIsSignUp,
+        isSignUp,
+      }}>
       <Layout>
         <div className={styles["app_bg"]}>
           <div className={styles["app_container"]}>

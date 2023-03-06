@@ -46,13 +46,26 @@
   color: aliceblue;
   transition: all 0.5s ease-in-out;
 }
-.input_err {
+.input_err,
+.login_error {
   color: red;
 }
 .success_msg {
   color: var(--main-color);
 }
-
+.login_error--container {
+  margin-top: 2rem;
+  display: flex;
+  gap: 3rem;
+}
+.login_signUp {
+  text-decoration: none;
+  color: var(--main-color);
+}
+.login_signUp:hover,
+.login_signUp:active {
+  color: var(--alt-color);
+}
 /* Responsiveness */
 @media only screen and (max-width: 600px) {
   .login_container {

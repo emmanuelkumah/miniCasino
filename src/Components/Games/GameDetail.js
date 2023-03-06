@@ -1,15 +1,25 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
+import { UserContext } from "../../context";
 import { gamesLibrary } from "../../Utils/GamesData";
 import styles from "./Games.module.css";
 
 const GameDetail = () => {
+  const [bet, setBet] = useState("");
+
   const params = useParams();
   const { id } = params;
 
-  const game = gamesLibrary.find((game) => game.name === id);
+  const { userDetails } = useContext(UserContext);
 
+  //find game
+  const game = gamesLibrary.find((game) => game.id === Number(id));
   const { name, desc, img } = game;
+
+  //place bet
+  const handleBet = (e) => {
+    setBet("Bet placed successfully");
+  };
 
   return (
     <>
@@ -22,13 +32,14 @@ const GameDetail = () => {
           <img src={img} alt={img} />
         </div>
         <section className={styles["game_cta"]}>
-          <p>{`Balance $100`}</p>
+          <h3>{`Balance: ${userDetails.username && "100 $"}`}</h3>
           <div className={styles["game_btn"]}>
-            <button>{`$ 1`}</button>
-            <button>{`$ 3`}</button>
-            <button>{`$ 5`}</button>
-            <button>{`$ 10`}</button>
+            <button onClick={handleBet}>{`$ 1`}</button>
+            <button onClick={handleBet}>{`$ 3`}</button>
+            <button onClick={handleBet}>{`$ 5`}</button>
+            <button onClick={handleBet}>{`$ 10`}</button>
           </div>
+          <p>{bet}</p>
         </section>
       </div>
     </>

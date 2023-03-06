@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Hero.module.css";
 import heroImg from "./hero2.png";
 const Hero = () => {
@@ -21,7 +22,9 @@ const Hero = () => {
               </h2>
               <p>Explore the world's largest selection of online games</p>
               <div className={styles["hero_btn_container"]}>
-                <button className={styles["hero_btn"]}>Sign Up</button>
+                <Link to="/signup">
+                  <button className={styles["hero_btn"]}>Sign Up</button>
+                </Link>
               </div>
             </section>
           </div>
